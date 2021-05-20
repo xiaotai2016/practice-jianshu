@@ -1,7 +1,9 @@
 import {
   HeaderDiv,
   NavDiv,
-  Logo 
+  Logo,
+  NavItem,
+  NavSearch
 } from './style'
 
 function Header (){
@@ -9,7 +11,11 @@ function Header (){
     <HeaderDiv>
       <Logo />
       <NavDiv>
-        This is the Header
+        <NavItem className = 'left active'>Home</NavItem>
+        <NavItem className = 'left'>Download APP</NavItem>
+        <NavItem className = 'right'>Login</NavItem>
+        <NavItem className = 'right'>Aa</NavItem>
+        <NavSearch />
       </NavDiv>
     </HeaderDiv>
   )

@@ -1,9 +1,16 @@
-import { HeaderDiv } from './style'
+import {
+  HeaderDiv,
+  NavDiv,
+  Logo 
+} from './style'
 
 function Header (){
   return(
     <HeaderDiv>
-      This is the Header
+      <Logo />
+      <NavDiv>
+        This is the Header
+      </NavDiv>
     </HeaderDiv>
   )
 }

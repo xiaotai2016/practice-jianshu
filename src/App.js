@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Header from './components/header'
 
 import { getInputValueAction, addListAction, deleteItemAction } from './store/createAction'
-import { GlobalStyle} from "./style"
+import { GlobalStyle } from "./style"
 
 function App() {
 
@@ -13,9 +13,6 @@ function App() {
       <Header />
     </React.Fragment>
   )
-  }
-
-
-
+}
 
 export default App;

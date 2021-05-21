@@ -3,7 +3,9 @@ import {
   NavDiv,
   Logo,
   NavItem,
-  NavSearch
+  NavSearch,
+  ButtonDiv,
+  Button
 } from './style'
 
 function Header (){
@@ -17,6 +19,10 @@ function Header (){
         <NavItem className = 'right'>Aa</NavItem>
         <NavSearch />
       </NavDiv>
+      <ButtonDiv>
+        <Button className='write'>Write Blogs</Button>
+        <Button className='reg'>Register</Button>
+      </ButtonDiv>
     </HeaderDiv>
   )
 }

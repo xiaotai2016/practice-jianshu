@@ -25,6 +25,8 @@ export const NavDiv = styled.div`
   width: 960px;
   height: 100%;
   margin: 0 auto;
+  padding-right: 70px;
+  box-sizing: border-box;
 `;
 
 export const NavItem = styled.div`
@@ -42,7 +44,7 @@ export const NavItem = styled.div`
   &.active {
     color: #ea6f5a;
   }
-`
+`;
 
 export const NavSearch = styled.input.attrs({
   placeholder: 'Search'
@@ -60,5 +62,30 @@ export const NavSearch = styled.input.attrs({
   background: #eee;
   &::placeholder {
     color: #999;
+  }
+`;
+
+export const ButtonDiv = styled.div`
+  position: absolute;
+  right: 0;
+  top:0;
+  height:56px;
+`;
+
+export const Button = styled.div`
+  float:right;
+  margin-top:9px;
+  margin-right: 20px;
+  padding: 0 20px;
+  line-height: 38px;
+  font-size: 14px;
+  border-radius: 19px;
+  border: 1px solid #ec6146;
+  &.reg{
+    color:#ec6146;
+  }
+  &.write{
+    color: white;
+    background: #ec4619
   }
 `

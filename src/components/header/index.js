@@ -16,11 +16,12 @@ function Header (){
         <NavItem className = 'left active'>Home</NavItem>
         <NavItem className = 'left'>Download APP</NavItem>
         <NavItem className = 'right'>Login</NavItem>
-        <NavItem className = 'right'>Aa</NavItem>
+        <NavItem className = 'right'><i className="iconfont icon-Aa" /></NavItem>
         <NavSearch />
+        <i className="iconfont icon-fangdajing" />
       </NavDiv>
       <ButtonDiv>
-        <Button className='write'>Write Blogs</Button>
+        <Button className='write'><i className="iconfont icon-line-quillpenyumaobi" />Write Blogs</Button>
         <Button className='reg'>Register</Button>
       </ButtonDiv>
     </HeaderDiv>

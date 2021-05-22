@@ -46,12 +46,43 @@ export const NavItem = styled.div`
   }
 `;
 
+export const SearchDiv = styled.div`
+  position: relative;
+  float: left;
+  .slide-enter{
+   transition: all 200ms ease-out;
+  }
+  .slide-enter-active{
+    width: 240px;
+  }
+  .slide-exit{
+    transition: all 200ms ease-out;
+  }
+  .slide-exit-action{
+    width: 160px;
+  }
+  .iconfont{
+    position:absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+     /* background:green; */
+    text-align: center;
+    &.focused{
+      background: #777;
+      color: #fff
+    }
+  }
+`;
+
 export const NavSearch = styled.input.attrs({
   placeholder: 'Search'
 })`
   width:160px;
   height: 38px;
-  padding: 0 20px;
+  padding: 0 30px 0 20px;
   margin-top: 9px;
   margin-left: 20px;
   box-sizing: border-box;
@@ -60,6 +91,10 @@ export const NavSearch = styled.input.attrs({
   outline: none;
   border-radius: 19px;
   background: #eee;
+  color: #666;
+  &.focused {
+    width: 240px;
+  }
   &::placeholder {
     color: #999;
   }
@@ -88,4 +123,4 @@ export const Button = styled.div`
     color: white;
     background: #ec4619
   }
-`
+`;

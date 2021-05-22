@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { connect } from 'react-redux';
+import { changeSearchInputFocusAction } from '../../store/createAction';
 import {
   HeaderDiv,
   NavDiv,
@@ -11,16 +13,7 @@ import {
   SearchDiv
 } from './style';
 
-function Header (){
-  const [focused, setFocused] = useState(false);
-
-  const handleSearchFocus = () => {
-    setFocused(true);
-  };
-
-  const handleSearchBlur = () =>{
-    setFocused(false);
-  };
+function Header (props){
 
   return(
     <HeaderDiv>
@@ -32,17 +25,17 @@ function Header (){
         <NavItem className = 'right'><i className="iconfont icon-Aa" /></NavItem>
         <SearchDiv>
           <CSSTransition
-            in = {focused}
+            in = {props.focused}
             timeout={200}
             classNames = "slide"
           >
             <NavSearch
-              className = {focused? 'focused' : '123'}
-              onFocus = {handleSearchFocus}
-              onBlur = {handleSearchBlur}
+              className = {props.focused? 'focused' : '123'}
+              onFocus = {props.handleSearchFocus}
+              onBlur = {props.handleSearchBlur}
             />
           </CSSTransition>
-            <i className = { focused? 'focused iconfont icon-fangdajing' : 'iconfont icon-fangdajing' } />
+          <i className = { props.focused? 'focused iconfont icon-fangdajing' : 'iconfont icon-fangdajing' } />
         </SearchDiv>
       </NavDiv>
       <ButtonDiv>
@@ -53,4 +46,13 @@ function Header (){
   )
 }
 
-export default Header;
+const mapStateToProps = (state) =>({
+  focused: state.focused
+})
+
+const mapDispatchToProps = (dispatch) =>({
+  handleSearchFocus: ()=>{dispatch(changeSearchInputFocusAction(true))},
+  handleSearchBlur: ()=>{dispatch(changeSearchInputFocusAction(false))}
+})
+
+export default connect (mapStateToProps, mapDispatchToProps)(Header);

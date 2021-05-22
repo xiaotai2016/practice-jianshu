@@ -1,15 +1,6 @@
-import { CHANGE_INPUT, ADD_LIST, DELETE_ITEM } from './actionType';
+import { SEARCH_INPUT_FOCUS} from './actionType';
 
-export const getInputValueAction = (value)=>({
-  type:CHANGE_INPUT,
+export const changeSearchInputFocusAction = (value)=>({
+  type:SEARCH_INPUT_FOCUS,
   value
-})
-
-export const addListAction = ()=> ({
-  type: ADD_LIST
-})
-
-export const deleteItemAction = (index) =>({
-  type:DELETE_ITEM,
-  index
 })

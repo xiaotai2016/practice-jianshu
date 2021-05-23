@@ -1,18 +1,8 @@
-import {SEARCH_INPUT_FOCUS} from './actionType';
+import { combineReducers } from 'redux';
+import {headerReducer} from '../components/header/store'
 
-const defaultState = {
-  focused: false
-}
-
-const mainReducer = (  state = defaultState, action )=>{
-  switch (action.type) {
-    case SEARCH_INPUT_FOCUS:
-      const newState = JSON.parse(JSON.stringify(state));
-      newState.focused = action.value;
-      return newState
-    default:
-      return state
-  }
-}
+const mainReducer = combineReducers ({
+  header:headerReducer
+})
 
 export default mainReducer;

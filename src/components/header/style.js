@@ -68,7 +68,6 @@ export const SearchDiv = styled.div`
     width: 30px;
     line-height: 30px;
     border-radius: 15px;
-     /* background:green; */
     text-align: center;
     &.focused{
       background: #777;

@@ -30,7 +30,7 @@ function Header (props){
             classNames = "slide"
           >
             <NavSearch
-              className = {props.focused? 'focused' : '123'}
+              className = {props.focused? 'focused' : ''}
               onFocus = {props.handleSearchFocus}
               onBlur = {props.handleSearchBlur}
             />
